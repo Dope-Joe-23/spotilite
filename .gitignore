@@ -10,6 +10,10 @@ staticfiles/
 __pycache__/
 *.pyc
 
+# Large media files
+backend/static/images/
+media/
+
 # Node
 node_modules/
 
