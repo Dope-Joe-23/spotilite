@@ -51,6 +51,13 @@ MIDDLEWARE = [
 ]
 
 # ----------------------
+# URL configuration & WSGI
+# ----------------------
+ROOT_URLCONF = "music_api.urls"
+WSGI_APPLICATION = "music_api.wsgi.application"
+
+
+# ----------------------
 # Django REST framework
 # ----------------------
 REST_FRAMEWORK = {
