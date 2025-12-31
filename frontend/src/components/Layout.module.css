@@ -1,0 +1,37 @@
+.layout {
+  display: flex;
+}
+
+.mainContent {
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: auto;
+  background: linear-gradient(to bottom, var(--spotify-dark-gray) 0%, var(--spotify-black) 100%);
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 32px;
+}
+
+.loginButton,
+.logoutButton {
+  background-color: var(--spotify-green);
+  color: var(--spotify-white);
+  border: none;
+  border-radius: 500px;
+  padding: 12px 32px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.loginButton:hover,
+.logoutButton:hover {
+  background-color: #1ed760;
+}
+
+.content {
+  padding: 0 32px;
+}

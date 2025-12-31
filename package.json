@@ -1,0 +1,20 @@
+{
+  "name": "spotilite",
+  "version": "1.0.0",
+  "description": "Spotilite - Music Player Application",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && python manage.py runserver",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && python manage.py migrate",
+    "build:frontend": "cd frontend && npm run build",
+    "install-all": "npm install && cd backend && pip install -r requirements.txt && cd ../frontend && npm install",
+    "migrate": "cd backend && python manage.py migrate",
+    "static": "cd backend && python manage.py collectstatic --noinput"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,38 @@
+.card {
+  background-color: var(--spotify-dark-gray);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: var(--spotify-light-gray);
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: var(--spotify-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardText {
+  font-size: 0.875rem;
+  color: var(--spotify-gray);
+  margin: 0;
+}

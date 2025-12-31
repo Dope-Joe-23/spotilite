@@ -1,0 +1,85 @@
+.artistsPage {
+  padding: 2rem;
+}
+
+.artistsPage h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.artistsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.artistCard {
+  background-color: var(--spotify-dark-gray);
+  border-radius: 8px;
+  padding: 16px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.artistCard:hover {
+  background-color: var(--spotify-light-gray);
+}
+
+.artistCard img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.artistCard h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artistCard p {
+  font-size: 0.875rem;
+  color: var(--spotify-gray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.loader {
+    border: 4px solid var(--spotify-light-gray);
+    border-top: 4px solid var(--spotify-green);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+  color: #ff5c5c;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+}
