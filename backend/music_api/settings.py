@@ -9,7 +9,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # ----------------------
 SECRET_KEY = os.environ.get("SECRET_KEY", "unsafe-secret-key")
 DEBUG = os.environ.get("DEBUG", "True") == "True"
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost").split(",")
+ALLOWED_HOSTS = os.environ.get(
+    "ALLOWED_HOSTS",
+    "localhost,127.0.0.1,spotilite.onrender.com"
+).split(",")
 
 # ----------------------
 # Static & Media
@@ -43,7 +46,6 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -112,9 +114,9 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 if not DEBUG:
-    # Add your Vercel frontend URL here
     CORS_ALLOWED_ORIGINS += [
-        "https://spotilite.vercel.app",
+        "https://spotilite-seven.vercel.app",
     ]
+
 
 CORS_ALLOW_CREDENTIALS = True
