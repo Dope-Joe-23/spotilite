@@ -109,14 +109,15 @@ else:
 # CORS
 # ----------------------
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Vite dev
+    "http://localhost:5173",  # for local dev
     "http://127.0.0.1:5173",
 ]
 
 if not DEBUG:
+    # Add your production frontend URL exactly
     CORS_ALLOWED_ORIGINS += [
-        "https://spotilite-seven.vercel.app",
+        "https://spotilite-lf29ep19e-dope-joe-23s-projects.vercel.app",
     ]
 
-
 CORS_ALLOW_CREDENTIALS = True
+
